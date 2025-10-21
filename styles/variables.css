@@ -18,7 +18,7 @@
   --inline-size: clamp(375px, 80%, 700px);
   --font-size-logo: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  --header-padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);;
+  --header-padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
 
   --border-container: 2px solid var(--accent-color);
 }

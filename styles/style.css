@@ -83,6 +83,9 @@
 
 .card__image-container {
   position: relative;
+  border: var(--border-container);
+  border-right: none;
+  border-left: none;
 }
 
 .card__image-label {
@@ -116,15 +119,8 @@
 .card__title {
   padding: 6px 10px;
   font-size: inherit;
-  line-height: 1;
   line-height: 1.1;
   font-variation-settings: 'wght' var(--main-font-weight-subtitle);
-}
-
-.card__image-container {
-  border: var(--border-container);
-  border-right: none;
-  border-left: none;
 }
 
 .card__image {
