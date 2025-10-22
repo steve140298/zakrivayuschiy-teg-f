@@ -9,6 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
 .page {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
@@ -54,7 +55,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color, #000);
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
 .button:hover::before {
@@ -98,11 +99,13 @@
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
-  text-shadow: 0px 0px 2px var(--light-color, #fff);
+  text-shadow: 0 0 2px var(--light-color, #fff);
   mix-blend-mode: hard-light;
 }
 
-@supports(-webkit-text-stroke: 1px var(--light-color, #fff)) or (text-stroke:1px var(--light-color, #fff)) {
+@supports (-webkit-text-stroke: 1px var(--light-color, #fff)) or
+  (text-stroke: 1px var(--light-color, #fff)) {
+
   .card__image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--light-color, #fff);
@@ -119,6 +122,8 @@
 
 .card__title {
   padding: 6px 10px;
+  padding-top: 7px;
+  padding-bottom: 5px;
   font-size: inherit;
   line-height: 1;
   font-variation-settings: 'wght' var(--main-font-weight-subtitle);
@@ -165,7 +170,7 @@
 }
 
 .card__description {
-  padding: 25px 25px 18px 25px;
+  padding: 25px 25px 18px;
 }
 
 .card__buttons {
@@ -177,7 +182,7 @@
 
 .card__icon-button {
   all: unset;
-  padding: 4px 4px 0px 4px;
+  padding: 4px 4px 0;
   transition: outline-offset 0.3s ease;
   cursor: pointer;
 }
@@ -189,7 +194,24 @@
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: -5px;
-  
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.003s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .like-icon:hover .core {
@@ -238,26 +260,8 @@
 }
 
 .card__like-button {
-  padding: 10px 0px;
+  padding: 10px 0;
   inline-size: 130px;
-}
-
-.contour {
-  transition: fill 0.1s linear;
-}
-
-.core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.003s;
-}
-
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.sparks {
-  opacity: 0;
 }
 
 .button__text {
@@ -322,6 +326,7 @@
 }
 
 @media (width <= 375px) {
+
   .header {
     margin-block-end: 100px;
   }

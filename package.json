@@ -1,0 +1,29 @@
+{
+  "name": "zakrivayuschiy-teg-f",
+  "version": "1.0.0",
+  "description": "https://github.com/steve140298/zakrivayuschiy-teg-f\r https://steve140298.github.io/zakrivayuschiy-teg-f/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Привет!'",
+    "check": "prettier --check './src/**/*.{html,css,js}'",
+    "format": "prettier --write './src/**/*.{html,css,js}'",
+    "lint": "stylelint ./src/**/*.css",
+    "lintfix": "stylelint ./src/**/*.css --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve140298/zakrivayuschiy-teg-f.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steve140298/zakrivayuschiy-teg-f/issues"
+  },
+  "homepage": "https://github.com/steve140298/zakrivayuschiy-teg-f#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "stylelint": "^16.25.0"
+  }
+}
